@@ -1,0 +1,58 @@
+<html>
+<head>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function getRSS(){
+
+    //use the JQuery get to grab the URL from the selected item, put the results in to an argument for parsing in the inline function called when the feed retrieval is complete
+	$.get('http://crunchbanglinux.org/forums/feed/rss/', function(d) {
+
+	    $('#feedContent').attr('value',d); 
+        
+        var count=0;
+        var last=getPref('lastReadTime',0);        
+        var newest=getPref('newestTime',0); 
+        
+        $(d).find('item').each(function(d){
+            
+            var $item = $(this);        
+			var pubDate = $item.find('pubDate').text();
+            var time = new Date(pubDate).getTime();            
+            if(time>last){
+                
+                count++;
+                
+                if(time>newest){
+                    newest=time;
+                }
+            
+            }           
+            
+        });
+        
+        setPref('newestTime',newest);
+        setPref('unread', count);
+        showUnread();
+
+	});
+    
+}
+
+$(document).ready(function(){
+    
+    init();
+    getRSS();
+    setInterval(getRSS, 5*60*1000);
+
+});
+</script>
+
+<div id="feedContent"></div>
+
+</body>
+</html>

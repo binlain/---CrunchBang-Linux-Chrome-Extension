@@ -1,0 +1,15 @@
+div.cbsave {
+
+    width: 16px;
+    height: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sMBA0HEdOWGXwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAPUlEQVQ4y2NgoBAwYhP8////f4IaGRmx6iVKM041xGjGqY5YzehqWUg1CN3vLEQHDg4w6oJB5wJSEtPgAQAhGDAaoZf9JwAAAABJRU5ErkJggg==);
+    position:absolute;
+    top: -20px;
+    right:-7px;
+    cursor:pointer;
+    
+}
+
+div.codebox {
+    position:relative;
+}

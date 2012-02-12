@@ -1,0 +1,32 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/popupstyle.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+</head>
+<body>
+<div id="feed"></div>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    var feed=$('#feed');
+    
+    $(chrome.extension.getBackgroundPage().document.getElementById('feedContent').value)
+    .find('item').each(function(d){
+		
+			var $item = $(this);
+			var title = $item.find('title').text();
+			var link = $item.find('link').text();
+            var elem=$('<a target="_blank" href="'+link+'">'+title+'</a><br>');
+            feed.append(elem);
+
+    });
+    
+    setPref('unread',0);
+    setPref('lastReadTime',getPref('newestTime',0));
+    showUnread();
+    
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>CrunchBang Chrome plugin preferences</title>
+<link rel="stylesheet" type="text/css" href="css/own.css">
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body bgcolor="black" style="color:white">
+
+<h3>CrunchBang Chrome plugin preferences</h3>
+
+Wherever to use the dark or the light icon:
+
+<select id="ico">
+<option value='dark.ico'>Dark</option>
+<option value='light.ico'>Light</option>
+</select>
+
+<br>
+
+Show count of unread posts:
+
+<select id="unread">
+<option value='yes'>yes</option>
+<option value='no'>no</option>
+</select>
+
+<script type="text/javascript">
+
+init();
+
+function selectOption(q, value){
+    $(q+" option[value='"+value+"']").attr('selected','selected');
+}
+
+function linkSelect(id,pref,def){
+
+    $(id).change(function(){
+        
+        setPref(pref,$(id).find(':selected').val());
+        init();
+
+    });
+
+    selectOption(id,getPref(pref,def));
+
+}
+
+linkSelect('#ico','ico','dark.ico');
+linkSelect('#unread','showUnread','yes');
+</script>
+<a href="http://crunchbanglinux.org/donations/" target="_blank" class="donate">DONATE TO THE CRUNCHBANG LINUX PROJECT</a>
+</body>
+</html>

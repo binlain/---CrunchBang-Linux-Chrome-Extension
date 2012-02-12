@@ -1,0 +1,33 @@
+body {
+
+   background-color: black;
+
+}
+
+body, a:link, a:visited {
+
+    width: 350px;
+    color: lightgray;
+    text-decoration:none;
+
+
+    
+}
+
+a:hover {
+
+    color: white;
+    text-decoration: underline;
+
+}
+
+a {
+
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    overflow: ellipsis;
+
+}

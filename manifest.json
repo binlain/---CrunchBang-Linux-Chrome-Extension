@@ -1,0 +1,22 @@
+{
+  "name": "CrunchBang Forum Extension",
+  "version": "1.4",
+  "description": "Inoffical chrome extension of CrunchBang Linux",
+  "homepage_url":"http://crunchbanglinux.org/forums/topic/16436/chrome-extension/",
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "images/dark.ico",
+    "popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://crunchbanglinux.org/forums/*"],
+      "css": ["css/style.css"],
+      "js": ["js/jquery.js", "js/topic.js"]
+    }
+  ],
+  "permissions": [ 
+    "http://crunchbanglinux.org/forums/feed/rss/*" 
+  ]
+}
