@@ -4,3 +4,5 @@ Features:
 - Enables you to edit and save code boxes
 - Shows count of unseen posts (can be disabled in the preferences tab)
 - Dark/Light Icon
+- Better readability thanks to Zenburn colorschmeme (Will auto-disable inverted colors)
+- Additional mark-as-read-button at the top. No need to scroll down.
