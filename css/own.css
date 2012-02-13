@@ -6,6 +6,7 @@ body{
     font-weight: normal;
     text-align: center;
     padding-top: 100px;
+    color: #dcdccc;
 }
 
 .donate{
@@ -19,14 +20,14 @@ body{
 
 a:link, a:visited {
 
-    color: lightgray;
+    color: #efdcbc;
     text-decoration:none;
     
 }
 
 a:hover {
 
-    color: white;
+    color: #cfac9c;
     text-decoration: underline;
 
 }

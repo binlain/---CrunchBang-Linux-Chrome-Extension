@@ -7,16 +7,14 @@ body {
 body, a:link, a:visited {
 
     width: 350px;
-    color: lightgray;
+    color: #efdcbc;
     text-decoration:none;
-
-
     
 }
 
 a:hover {
 
-    color: white;
+    color: #cfac9c;
     text-decoration: underline;
 
 }
