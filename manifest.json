@@ -13,7 +13,7 @@
     {
       "matches": ["http://crunchbanglinux.org/forums/*"],
       "css": ["css/style.css"],
-      "js": ["js/jquery.js", "js/topic.js"]
+      "js": ["js/jquery.js", "js/topic.js","js/forum.js"]
     }
   ],
   "permissions": [ 

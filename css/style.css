@@ -31,3 +31,8 @@ body input, body textarea, body select, body button {
 	color: #dcdccc !important;
 	border: 1px solid black !important;
 }
+
+.button-colours{
+	display: none !important;
+	visibility: hidden !important;
+}
